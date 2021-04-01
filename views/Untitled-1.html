@@ -1,0 +1,102 @@
+<html>
+<header></header>
+
+
+<!-- <link rel="stylesheet" href="style.css"> -->
+
+
+<style>
+    .ntd-ctn {
+        position: absolute;
+        top: 8px;
+        left: -8px;
+        font-size: 10px;
+        background: #e46a76;
+        height: 18px;
+        width: 18px;
+        line-height: 18px;
+        text-align: center;
+        border-radius: 50%;
+        z-index: 999;
+    }
+    
+    .spinner4 {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        position: absolute;
+        display: inline-block;
+        top: 3px;
+        left: -14px;
+    }
+    
+    .spinner4:after,
+    .spinner4:before {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+    
+    .spinner-4::before,
+    .spinner-4::after {
+        position: absolute;
+        margin-top: 0px;
+        margin-left: 0px;
+        background: orangered;
+        -webkit-animation: pulse 3s linear infinite;
+        animation: pulse 3s linear infinite;
+        opacity: 0;
+        top: 0;
+        left: 0;
+    }
+    
+    .spinner-4:after {
+        -webkit-animation: pulse 2s linear 2.3s infinite;
+        animation: pulse 2s linear 2.3s infinite;
+        z-index: 99;
+    }
+    
+    @-webkit-keyframes pulse {
+        0% {
+            -webkit-transform: scale(0);
+            transform: scale(0);
+            opacity: 1;
+        }
+        100% {
+            -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+            opacity: 0;
+        }
+    }
+    
+    @keyframes pulse {
+        0% {
+            -webkit-transform: scale(0);
+            transform: scale(0);
+            opacity: 1;
+        }
+        100% {
+            -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+            opacity: 0;
+        }
+    }
+</style>
+
+<body>
+    <div class="progress">
+        <div class="lead-content">
+            <p>HTML5 Validation Report</p>
+        </div>
+        <div class="progress-bar wow fadeInLeft" data-progress="95%" style="width: 95%; visibility: visible; animation-duration: 1.5s; animation-delay: 1.2s; animation-name: fadeInLeft;" data-wow-duration="1.5s" data-wow-delay="1.2s"> <span>95%</span>
+        </div>
+    </div>
+
+
+    <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-alarm"></i></span><div class="spinner4 spinner-4"></div><div class="ntd-ctn"><span>3</span></div></a>
+
+</body>
+
+</html>
